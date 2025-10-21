@@ -771,37 +771,87 @@ footer p {
 }
 
 
-/* ----------------------- Responsive Design ----------------------- */
 
-/* Mobile View (≤768px) */
+/* existing styles kept ... (your CSS above) */
+
+/* Hamburger icon default hidden */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 40px;
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
-  header {
-    padding: 15px 25px;
+  /* Navbar responsive */
+  .hamburger {
+    display: block;
+    z-index: 1100;
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #0a192f;
     position: absolute;
-    top: 65px;
-    right: 0;
+    top: 70px;
+    left: 0;
     width: 100%;
-    text-align: center;
-    padding: 20px 0;
+    background: linear-gradient(135deg, #004d40, #00796b, #a8e063);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    display: none;
   }
 
   .nav-links.active {
     display: flex;
+    animation: fadeIn 0.3s ease-in-out;
   }
 
-  .hamburger {
-    display: block;
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
-  .service-cards {
+  .features-grid,
+  .services-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-container,
+  .contact-container,
+  .team-container {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-container {
+    gap: 60px;
+  }
+
+  .social-icons {
+    margin-top: 50px;
   }
 
   .hero h1 {
@@ -810,6 +860,30 @@ footer p {
 
   .hero p {
     font-size: 1rem;
+  }
+
+  .hero-btn {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .features,
+  .services,
+  .about,
+  .contact {
+    padding: 60px 20px;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .about-list {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 

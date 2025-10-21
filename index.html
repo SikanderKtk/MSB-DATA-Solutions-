@@ -17,9 +17,6 @@
 
             <div class="logo">MSB DATA SOLUTIONS</div>
 
-            <div class="hamburger" id="hamburger">
-                <i class="fa-solid fa-bars"></i>
-            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#feature">Features</a></li>
@@ -30,6 +27,11 @@
                 <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
         </nav>
     </header>
 
@@ -397,15 +399,15 @@
     </section>
 
     <script>
-        // Hamburger Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("nav-links");
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
         });
     </script>
-
 
 
 </body>
