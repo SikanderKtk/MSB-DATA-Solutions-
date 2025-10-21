@@ -14,13 +14,12 @@
 
     <header>
         <nav class="navbar">
-            
+
             <div class="logo">MSB DATA SOLUTIONS</div>
 
-            <!-- Hamburger icon -->
-            <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#feature">Features</a></li>
@@ -198,39 +197,50 @@
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img src="images/spaceX dash.PNG" alt="Gallery 1">
-                <div class="overlay"> <a href="https://spacex-first-stage-landing-prediction.streamlit.app/" target="blank">SpaceX First Stage Landing Prediction</a> </div>
+                <div class="overlay"> <a href="https://spacex-first-stage-landing-prediction.streamlit.app/"
+                        target="blank">SpaceX First Stage Landing Prediction</a> </div>
             </div>
             <div class="gallery-item">
                 <img src="images/houce price.PNG" alt="Gallery 2">
-                <div class="overlay"><a href="https://houce-price-analysis-prediction-yxkxhhr8yr9tdxqga2hfuc.streamlit.app/" target="blank">Houce Price Prediction</a></div>
+                <div class="overlay"><a
+                        href="https://houce-price-analysis-prediction-yxkxhhr8yr9tdxqga2hfuc.streamlit.app/"
+                        target="blank">Houce Price Prediction</a></div>
             </div>
             <div class="gallery-item">
                 <img src="images/heartpredict.PNG" alt="Gallery 3">
-                <div class="overlay"><a href="https://heart-disease-prediction-ap.streamlit.app/" target="blank">Heart Disease Prediction</a></div>
+                <div class="overlay"><a href="https://heart-disease-prediction-ap.streamlit.app/" target="blank">Heart
+                        Disease Prediction</a></div>
             </div>
             <div class="gallery-item">
                 <img src="images/Email spam.PNG" alt="Gallery 4">
-                <div class="overlay"><a href="https://email-spam-classifier-2.streamlit.app/" target="blank">Email Spam Classifier</a></div>
+                <div class="overlay"><a href="https://email-spam-classifier-2.streamlit.app/" target="blank">Email Spam
+                        Classifier</a></div>
             </div>
             <div class="gallery-item">
                 <img src="images/car Price.PNG" alt="Gallery 5">
-                <div class="overlay"><a href="https://car-price-predict-byfeatures.streamlit.app/" target="blank">Car Price Prediction</a></div>
+                <div class="overlay"><a href="https://car-price-predict-byfeatures.streamlit.app/" target="blank">Car
+                        Price Prediction</a></div>
             </div>
             <div class="gallery-item">
                 <img src="images/sms.PNG" alt="Gallery 6">
-                <div class="overlay"><a href="https://sikanderktk.github.io/TechNik-Nest-School-Management-System-FrontEnd-Project/" target="blank">School Management System</a></div>
+                <div class="overlay"><a
+                        href="https://sikanderktk.github.io/TechNik-Nest-School-Management-System-FrontEnd-Project/"
+                        target="blank">School Management System</a></div>
             </div>
             <div class="gallery-item">
                 <img src="images/landing.PNG" alt="Gallery 7">
-                <div class="overlay"><a href="https://sikanderktk.github.io/Proffesional-landing-Page/" target="blank">Proffesional Landing Page</a></div>
+                <div class="overlay"><a href="https://sikanderktk.github.io/Proffesional-landing-Page/"
+                        target="blank">Proffesional Landing Page</a></div>
             </div>
             <div class="gallery-item">
                 <img src="images/Single Page Web.PNG" alt="Gallery 8">
-                <div class="overlay"><a href="https://demo.bytelabx.com/html/binuza/index-one-page.html" target="blank">Single Page Web</a></div>
+                <div class="overlay"><a href="https://demo.bytelabx.com/html/binuza/index-one-page.html"
+                        target="blank">Single Page Web</a></div>
             </div>
             <div class="gallery-item">
                 <img src="images/portfolio.PNG" alt="Gallery 9">
-                <div class="overlay"> <a href="https://sikander-portfolio.lovable.app/" target="blank">Personal Portfolio</a></div>
+                <div class="overlay"> <a href="https://sikander-portfolio.lovable.app/" target="blank">Personal
+                        Portfolio</a></div>
             </div>
         </div>
     </section>
@@ -386,7 +396,15 @@
         </footer>
     </section>
 
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 
 
